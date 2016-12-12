@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tutorial</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+	.jumbotron{
+		background-image:url("number.jpg");
+		background-size:cover;
+	}
+	.navbar-nav{
+		text-align:center;
+	}
+	.col-sm-8{
+		padding-top:30px;
+		background-color:lavender;
+	}
+	h1{
+		text-align:center;
+	}
+	img{
+ 		width:740px;
+		height:300px;
+		margin: 0 auto;
+		display:block;
+	}
+	hr{
+		border-style:inset;
+		border-width:2px;
+	}
+	.rainbow {
+  	background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+ 	 	background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  	color:transparent;
+  	-webkit-background-clip: text;
+  	background-clip: text;
+	}
+	body{
+		background-image:url("number4.jpg");
+	}
+	.Fixed{
+    position: fixed;
+    bottom: 20px;
+	}
+  </style>
+ </head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<!--NAVIGATION BAR-->
+<nav class="navbar navbar-default navbar-fixed-top"><!--create default nav bar and stick nav bar to top-->
+  <div class="container-fluid">
+    <ul class="nav navbar-nav"><!--list items with links inside a nav bar-->
+    	<img src="logo.png" style="width:10%;float:left;height:10%;padding-left:20px;padding-right:20px;">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tutorial.html">Tutorial</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="about_us.html">About Us</a></li>
+    </ul>
+  </div>
+</nav>
+<!--NAVIGATION BAR END-->
+
+<div class="container-fluid" style="margin-top:50px">
+  <div class="jumbotron text-center">
+	  <h1><strong>JAWKICADEMY</strong></h1>
+  </div>
+</div>
+
+  <!--NAVIGATION-->
+<nav class="navbar navbar-default">
+  <div class="container-fluid" style="padding-left:500px;">
+    <ul class="nav navbar-nav">
+      <li><a href="#factor">FACTORING</a></li>
+      <li><a href="#functions">FUNCTIONS</a></li>
+      <li><a href="#quad">QUADTRATIC</a></li>
+      <li><a href="#slope">SLOPE</a></li>
+	  	<li><a href="#poly">POLYNOMIALS</a></li>
+    </ul>
+  </div>
+</nav>
+  <!--  -->
+  
+<div id="factor" class="container-fluid">
+	<div class="row">
+		<div class="col-sm-2">
+		</div>
+		<div class="col-sm-8">
+			<h1><strong>FACTORING</strong></h1>
+			<p>For the easy case of factoring, you will find two numbers that will not only multiply to equal the constant term "c", but also add up to equal "b".for example :X^2-3x+2 can be complete factoring the answer is (x-1) (x-2), but this is not the final answer , you need to set both factor as x-1=0 and x-2=0, and then you can find out two x's answer, which is x=1 and x=2. however, some equation can not solve in this is way, it needs to use the formula to solve it. Answers always have 2 solutions. They can be either rational or irrational.however in some case the equation can only get one solution because the solutions are the same.</p>
+			<img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR6sLkzveJf3brpJ8jjB1qyg-R0hAUcyeJyBYMeykx9s8JhX4gOU449eyDM" alt="factoring">
+			<hr>
+		</div>
+
+	
+		<div class="col-sm-2">
+		</div>
+	</div>
+</div>
+
+<div id="functions" class="container-fluid">
+	<div class="row">
+		<div class="col-sm-2">
+		</div>
+		<div class="col-sm-8">
+			<h1><strong>FUNCTIONS</strong></h1>
+			<p> A function relates an input to an output. f(x) = ... " is the classic way of writing a function.  Basically a function is that the same x value can not have more than 1 y value.  Moreover , for function, in one  x value you can not have more than one value. For example {(1,0),(2,0),(3,1)} could be a function. But {(1,0),(1,1), (1,2)} can not be a function because the x value which is one has more than 1 y value . </p>
+			<img src="http://sagmeisterwalsh.com/_image/2600x/f6c325679e82b94bb58a7cb608f7803e.jpg" alt="Mountain View">
+			<hr>
+		</div>
+
+
+		<div class="col-sm-2">
+		</div>
+	</div>
+</div>
+
+<div id="quad" class="container-fluid">
+	<div class="row">
+		<div class="col-sm-2">
+		</div>
+		<div class="col-sm-8">
+			<h1><strong>QUADRATIC EQUATIONS</strong></h1>
+			<p>Often, the simplest way to solve "ax<sup>2</sup> + bx + c= 0" for the value of x is to factor the quadratic, set each factor equal to zero, and then solve each factor. But sometimes the quadratic is too messy, or it doesn't factor at all, or you just don't feel like factoring. While factoring may not always be successful, the Quadratic Formula can always find the solution.it has three ways to ask for the solution:what is the x coeffction ? where will the y intercept attach to the line ? and solve for the quadratic equation .
+How to solve for the x coefficient?  
+Find the largest value that can be factored from each of the elements of the expression,and then think about which value  can be multiply and it also equal to c . then if you can find out two number the attach the the x intercept.
+2 where will the y intercept attach to the line ?
+You need to use the equation w(x+k)+y to factor out all the number , so you can find you what is the y intercept for the equation .
+3 solve for quadratic equation .
+You need to use the formula to solve it . first we need to know the equation is ax<sup>2</sup>+bx+c=0 so we can put in the number one by one </P>
+    	<img src="http://practiceit.cs.washington.edu/problems//bjp4/chapter3/quadratic.gif" alt="Mountain View">
+			<hr>
+		</div>
+	
+		<div class="col-sm-2">
+		</div>
+	</div>
+</div>
+
+<div id="slope" class="container-fluid">
+	<div class="row">
+		<div class="col-sm-2">
+		</div>
+		<div class="col-sm-8">
+			<h1><strong>SLOPE</strong></h1>
+			<p>equation y=mx+b   b is the y intercept that attach to the the x-axis , m is the slope for the equation. If m is negative it will goes down , if n is possible i will considering a possible line. Example : y=2x+3  and y=2x-3 are all possible slope. How to calculate slope? as shown on the picture, if you want to find a slope of the line you need to use the equation y2-y1/x2-x1 so for this line the equation will be ⅔ x and the y intercept is where the line intercept with the y axis. Which is 0.5. So we can determine the line as y=2/3x+0.5
+ 
+ </p>
+			<img src="http://pad2.whstatic.com/images/thumb/6/69/Find-the-Slope-of-an-Equation-Step-4-Version-2.jpg/aid2839184-728px-Find-the-Slope-of-an-Equation-Step-4-Version-2.jpg" alt="Mountain View">
+			<hr>
+		</div>
+		<div class="col-sm-2">
+		</div>
+	</div>
+</div>
+
+
+<div id="poly" class="container-fluid">
+	<div class="row">
+		<div class="col-sm-2">
+		</div>
+		<div class="col-sm-8">
+			<h1><strong>POLYNOMIALS</strong></h1>
+			<p>An expression that can have constants, variables and exponents, that can be combined using addition, subtraction, multiplication and division, but:
+
+
+• no division by a variable.
+• a variable's exponents can only be 0,1,2,3,... etc.
+• it can't have an infinite number of terms.
+</p>	
+			<img src="https://s-media-cache-ak0.pinimg.com/736x/0e/3b/68/0e3b6893317b89b0b6ab61302d992cfb.jpg" alt="Mountain View">
+			<hr>
+		</div>
+	
+		<div class="col-sm-2">
+		</div>
+	</div>
+</div>
+<div class="Fixed">
+	<br>
+	<br>
+<a href="tutorial.html" class="btn btn-info" role="button">Back To The Top</a>
+</div>
+<div class="container-fluid">
+	<footer class="container-fluid text-center">
+  	<span class="rainbow">&copy; Copyright 2016 JAWKICADEMY</span>
+	</footer>
+</div>
+
+</body>
+</html>

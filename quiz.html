@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<style>
+		body  {
+    background-image: url("number5.jpg");
+    background-color: #cccccc;
+	}
+	.rainbow{
+	  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+	  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+	  color:transparent;
+	  -webkit-background-clip: text;
+	  background-clip: text;
+	  font-size: 300%;
+	}
+	</style>
+		<title>Bootstrap Example</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+		<script type="text/javascript">
+			<!--Initialize Firebase-->
+			var config = {
+				apiKey: " AIzaSyC_rjteNuutewxJmk9P-UIfLxLH6VP0_4g",
+				authDomain: "algebra-quiz.firebaseapp.com",
+				databaseURL: "https://algebra-quiz.firebaseio.com/",
+				storageBucket: "gs://algebra-quiz.appspot.com",
+			};
+      		firebase.initializeApp(config);
+		</script>
+
+	</head>
+	
+	<body>
+		<!--NAVIGATION BAR-->
+		<nav class="navbar navbar-default navbar-fixed-top"><!--create default nav bar and stick nav bar to top-->
+			<div class="container-fluid">
+				<ul class="nav navbar-nav"><!--list items with links inside a nav bar-->
+					<img src="logo.png" style="height:10%; width:7%;float:left;">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="tutorial.html">Tutorial</a></li>
+					<li><a href="quiz.html">Quiz</a></li>
+					<li><a href="about_us.html">About Us</a></li>
+				</ul>
+			</div>
+		</nav>
+		<br>
+		<!--Content-->
+		<br>
+		<br>
+		<script src ="timer.js">
+		</script>
+    			<div style = "color:snow"> Time remaining for the Quiz : <span id="time"></span> minutes!</div>
+		<script scr = "mustache.js">
+		</script>
+		<div class="container-fluid" style="margin-top:50px" id =  "outputques">
+
+		</div>
+		<a class="btn btn-info" role="button" onclick="grade()">Submit Answer</a>
+		<footer class="container-fluid text-center">
+  		<span class="rainbow">&copy; Copyright 2016 JAWKICADEMY</span>
+		</footer>
+		<script src="mustache.js"></script>
+		<script id="quiztemplate" type="text/template">
+			<div class="item">
+			  <div class="panel panel-default">
+				<div class="panel-heading">{{data.question}}</div>
+				  <div class="panel-body">
+					<div style="float:left;width:400px">
+					<form>
+	  				  <input type="radio" name="{{Qkey}}" value="a">{{data.A}}<br>
+	 				  <input type="radio" name="{{Qkey}}" value="b">{{data.B}}<br>
+					  <input type="radio" name="{{Qkey}}" value="c">{{data.C}}<br>
+					  <input type="radio" name="{{Qkey}}" value="d">{{data.D}}<br>
+				  	</form>
+				  </div>
+				</div>
+			 </div>
+		</script>
+		<script>
+		var database = firebase.database().ref('questions');
+		  var data, build;
+		  var myTemplate = $("#quiztemplate").html()
+		  database.on('value',function(snapshot){
+			  build = "";
+			  data = snapshot.val();
+			  for(key in data){
+				  build += Mustache.render(myTemplate,{Qkey:key, data:data[key]});
+				  //console.log(data[key]);
+			  }
+			  $("#outputques").html(build);
+		  });
+
+		  function grade(){
+		  		var x=0;
+				var y=0;
+			    for(key in data){
+
+					userAnswer = $("input[name="+key+"]:checked").val();
+					if(userAnswer == data[key].answer){
+					x++;
+					}else{
+					y++;
+					}
+				}
+								
+			alert("You Scored "+ ((x*100)/(x+y))+"%");
+		}
+		  
+		</script>
+	</body>
+</html>
